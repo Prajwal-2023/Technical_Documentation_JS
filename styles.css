@@ -1,0 +1,253 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: raleway;
+  /* color:#4d4e53; */
+  --color: #4d4e53;
+  --bgcolor: #eeeeeeea;
+}
+
+html,
+body {
+  width: 100%;
+  max-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 22% 78%;
+  /* position: relative; */
+}
+
+/* LEFT SIDE NAVBAR */
+
+
+#navbar {
+  grid-column-start: 1;
+  position: relative;
+
+  /* overflow: ; */
+
+}
+
+#navbar #header-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22%;
+  text-align: center;
+  padding-top: 25px;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color);
+
+}
+
+.for-navlink {
+  text-align: left;
+  position: fixed;
+  top: 90px;
+  width: 22%;
+  /* overflow-y: scroll; */
+  /* height: 550px;   */
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+}
+
+.for-navlink a {
+  display: block;
+  padding: 15px 0;
+  padding-left: 30px;
+  font-weight: 500;
+  border-top: 1px solid var(--color);
+  color: #111;
+  text-decoration: none;
+  user-select: none;
+}
+
+.for-navlink a:hover {
+  background-color: var(--bgcolor);
+
+}
+
+
+
+/* right side */
+a {
+  color: blue;
+  font-size: medium;
+}
+
+#main-doc {
+  width: 100%;
+  min-height: 100vw;
+  /* background-color: rgb(245, 116, 116); */
+  background-color: #ffffff;
+  grid-column-start: 2;
+  user-select: none;
+  border-left: 4px solid rgb(153, 153, 148);
+
+}
+
+.main {
+  display: flex;
+}
+
+/* :not(first-child)element */
+
+/* HAD TO CHANGE IT BECAUSE OF THE FUCKING LEFT SIDE HEADER */
+.the-main-header {
+  font-weight: 700;
+  font-size: 30px;
+  padding-left: 50px;
+  padding-top: 50px;
+  margin-bottom: 10px;
+}
+
+p {
+  padding-left: 60px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  color: var(--color);
+  font-weight: 500;
+}
+
+ul {
+  padding-left: 90px;
+  line-height: 30px;
+  color: var(--color);
+  font-weight: 500;
+}
+
+li {
+  margin-bottom: 15px;
+  color: var(--color);
+  font-weight: 500;
+}
+
+code {
+  font-family: sans-serif;
+  line-height: 20px;
+  margin-left: 20px;
+  display: block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding-left: 15px;
+  justify-content: center;
+  color: var(--color);
+}
+
+.cod {
+  background-color: var(--bgcolor);
+  margin: 0 auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  width: 90%;
+  min-height: 80px;
+  height: auto;
+  text-align: left;
+
+}
+
+ul #circlespace {
+  padding-left: 70px;
+  list-style-type: circle;
+
+}
+
+@media (max-width:1020px) {
+  #navbar #header-text {
+    font-size: 25px;
+
+  }
+  
+
+
+}
+
+
+
+
+
+
+@media (max-width:1000px) {
+  #navbar #header-text {
+    font-size: 25px;
+  }
+
+}
+
+
+
+
+@media (max-width:850px) {
+  body {
+    display: block;
+  }
+
+  #main-doc {
+    margin-top: 150px;
+  }
+
+
+  #navbar {
+    grid-column-start: 2;
+  }
+
+
+
+  #navbar #header-text {
+    width: 100%;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color);
+    border-bottom: 1px solid black;
+    background-color: #ffffff;
+
+  }
+
+
+  .for-navlink {
+    position: fixed;
+    top: 53px;
+    width: 100%;
+    overflow-y: scroll;
+    height: 120px;
+    /* border:1px solid blue; */
+    border-bottom: 1px solid black;
+    background-color: #ffffff;
+
+  }
+
+  .for-navlink a {
+    padding: 16px 0;
+    padding-left: 30px;
+    font-weight: 500;
+    border-top: 1px solid var(--color);
+    color: #111;
+    text-decoration: none;
+    user-select: none;
+    font-size: 23px;
+    text-align: center;
+
+  }
+
+  .for-navlink a:hover {
+    background-color: var(--bgcolor);
+
+  }
+
+
+
+}
